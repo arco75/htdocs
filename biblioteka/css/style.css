@@ -1,0 +1,29 @@
+#strona, #menu{
+
+    min-height: 350px;
+    border:1px dotted #999999;
+    background-color: rgba(30, 30, 30, 0.425)
+}
+.logo{
+    background-color: rgba(137, 137, 137, 0.425);
+    height: 180px;   
+}
+thead{
+    font-weight: bold;
+    background-color: rgba(18, 18, 18, 0.425);
+
+}
+td{
+    color:#EEEEEE;
+    font-size:17px;
+    text-shadow: 0px 0px 20px #ffffff;
+}
+body{
+    background-image: url('../images/tlo.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    color:#cfcfcf;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}

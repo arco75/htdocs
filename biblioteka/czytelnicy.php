@@ -15,8 +15,7 @@
 
     $n=0;
 
-    while($wiersz = $result->fetch_assoc())
-{
+    while($wiersz = $result->fetch_assoc()){
 
     $n=$n+1;
     
@@ -30,3 +29,12 @@ $baza->close();
 ?>
 </tbody>
 </table>
+
+<hr>
+<h4> Dodawanie czytelnika</h4>
+<form action="addczytelnik.php" method="POST">
+Imię: <input type="text" name="f_imie" placeholder="Tu wpisz imię"><br>
+Nazwisko:<input type="text" name="f_nazwisko" placeholder="Tu wpisz nazwisko"><br>
+Telefon:<input type="text" name="f_telefon" placeholder="telefon"><br>
+<button type="submit">Dodaj do bazy</button>
+</form>

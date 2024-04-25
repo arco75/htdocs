@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 18, 2024 at 09:55 AM
+-- Generation Time: Apr 25, 2024 at 09:29 AM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -58,6 +58,41 @@ INSERT INTO `klienci` (`id`, `nazwa`, `adres`, `telefon`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `operacje`
+--
+
+CREATE TABLE `operacje` (
+  `id` int(11) NOT NULL,
+  `idk` int(11) NOT NULL,
+  `idt` int(11) NOT NULL,
+  `data` date NOT NULL,
+  `dokument` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `towary`
+--
+
+CREATE TABLE `towary` (
+  `id` int(11) NOT NULL,
+  `nazwa` varchar(50) NOT NULL,
+  `cena` float NOT NULL,
+  `ilosc` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Dumping data for table `towary`
+--
+
+INSERT INTO `towary` (`id`, `nazwa`, `cena`, `ilosc`) VALUES
+(2, 'towar1', 10, 100),
+(3, 't2', 11, 22);
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `users`
 --
 
@@ -87,6 +122,20 @@ ALTER TABLE `klienci`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeksy dla tabeli `operacje`
+--
+ALTER TABLE `operacje`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idk` (`idk`),
+  ADD KEY `idt` (`idt`);
+
+--
+-- Indeksy dla tabeli `towary`
+--
+ALTER TABLE `towary`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeksy dla tabeli `users`
 --
 ALTER TABLE `users`
@@ -103,10 +152,33 @@ ALTER TABLE `klienci`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
+-- AUTO_INCREMENT for table `operacje`
+--
+ALTER TABLE `operacje`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `towary`
+--
+ALTER TABLE `towary`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `operacje`
+--
+ALTER TABLE `operacje`
+  ADD CONSTRAINT `operacje_ibfk_1` FOREIGN KEY (`idk`) REFERENCES `klienci` (`id`),
+  ADD CONSTRAINT `operacje_ibfk_2` FOREIGN KEY (`idt`) REFERENCES `towary` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

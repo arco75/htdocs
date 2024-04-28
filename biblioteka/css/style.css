@@ -9,11 +9,11 @@
     height: 180px;   
 }
 #log{
-    font-size:20px;
+    font-size:15px;
     color:rgba(255,0,0,0.55);
     position:fixed;
     top:0px;
-    left: 90%;
+    left: 80%;
     font-weight: bolder;
     background-color:rgba(255,255,255,0.21);
     padding-top: 40px;

@@ -1,3 +1,5 @@
+<meta http-equiv='Refresh' content='2; url=http://localhost/biblioteka/index.php' >
+
 <?php
 
 $login=$_POST['f_login'];
@@ -12,7 +14,11 @@ $result = $baza->query($zapytanie) or die ('bledne zapytanie');
     while($wiersz = $result->fetch_assoc()){
 
         if($wiersz['haslo']==$haslo){
-            echo "Udalo sie!";
+            echo "<b>Udalo sie!</b>";
+            session_start();
+            $_SESSION['kto']=$wiersz['imienazwisko'];
+            $_SESSION['pu']=$wiersz['pu'];
+    
         };
     };
 

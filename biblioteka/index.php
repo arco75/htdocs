@@ -18,11 +18,15 @@
         <h1>Biblioteka</h1>
         <p>Projekt na zaliczenie Baz Danych - R2IN</p>
     </div>
-    
     <div id="log"> 
-        <a href="login.php">{ Login }</a> 
+        <?php
+            session_start();
+            if(isset($_SESSION['pu']))
+                echo "Witaj ". $_SESSION['kto']."<br><a href='logout.php'> { Logout }</a>"; 
+            else
+                echo "<a href='login.php'>{ Login }</a>"; 
+       ?>
     </div>
-    
     
     
     <div class="row">

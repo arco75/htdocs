@@ -1,7 +1,29 @@
+<script>
+$(document).ready(function() {
+
+    $("#form_addczytelnik").submit(function(){
+        $.ajax({
+          url: "addczytelnik.php",
+          type: "POST",
+          data: $("#form_addczytelnik").serialize(),
+          cache: false,
+          success: function (response) {    
+                    //$("#tabczytelnicy").append(response);
+                    $("#strona").load("czytelnicy.php");
+                    }
+        });
+        
+        return false;
+    });   
+   
+    
+}); 
+
+</script>
 <h5>Lista czytelników</h5>
 
 
-<table class="table table-condensed">
+<table class="table table-condensed" id="tabczytelnicy">
     <thead>
         <tr><td>  Lp. </td><td> Imię </td><td> Nazwisko</td><td> Telefon </td><td> Opcje </td></tr> 
     </thead>
@@ -32,7 +54,7 @@ $baza->close();
 
 <hr>
 <h4> Dodawanie czytelnika</h4>
-<form action="addczytelnik.php" method="POST">
+<form action="addczytelnik.php" method="POST" id="form_addczytelnik">
 Imię: <input type="text" name="f_imie" placeholder="Tu wpisz imię"><br>
 Nazwisko:<input type="text" name="f_nazwisko" placeholder="Tu wpisz nazwisko"><br>
 Telefon:<input type="text" name="f_telefon" placeholder="telefon"><br>

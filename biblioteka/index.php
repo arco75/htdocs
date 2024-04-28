@@ -10,13 +10,21 @@
     <script src="./js/jq.min.js"></script>
 </head>
 <body>
+    
 <div class="container">
-
+    
+    
     <div class="jumbotron logo">
         <h1>Biblioteka</h1>
         <p>Projekt na zaliczenie Baz Danych - R2IN</p>
     </div>
-
+    
+    <div id="log"> 
+        <a href="login.php">{ Login }</a> 
+    </div>
+    
+    
+    
     <div class="row">
         <div class="col-sm-2" id="menu">Menu <br>
         <div class="btn-group-vertical">

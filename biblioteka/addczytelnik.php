@@ -11,5 +11,6 @@ $telefon=$_POST['f_telefon'];
     $result = $baza->query($zapytanie) or die ('bledne zapytanie');
 
     $baza->close();
+    echo "<tr><td>.</td><td>$imie</td><td>$nazwisko</td><td>$telefon</td><td>???</td></tr>";
 ?>
 

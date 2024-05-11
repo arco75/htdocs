@@ -44,7 +44,8 @@ $(document).ready(function() {
     
     echo "<tr><td> ".$n."</td><td> ".$wiersz['imie']."</td><td> ".$wiersz['nazwisko']."</td><td> ". $wiersz['telefon']." </td><td>";
     if(isset($_SESSION['pu']) && ($_SESSION['pu']<=0))
-        echo "<a href=delczytelnik.php?id=".$wiersz['id']."> X </a>";    
+        echo "<a href=delczytelnik.php?id=".$wiersz['id']."> X </a>";  
+        echo "<a href=editczytelnik.php?id=".$wiersz['id']."> E </a>";  
     echo "</td></tr>";
 };
 

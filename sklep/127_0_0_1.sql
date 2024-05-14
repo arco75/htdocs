@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2024 at 09:29 AM
+-- Generation Time: Maj 14, 2024 at 10:24 AM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -41,19 +41,12 @@ CREATE TABLE `klienci` (
 --
 
 INSERT INTO `klienci` (`id`, `nazwa`, `adres`, `telefon`) VALUES
-(1, 'ABC', 'Oświęcim', '123-123-123'),
-(4, 'Artur', 'Kolbego', '12345676'),
-(10, 'rw42', '432423', '42343'),
-(13, '43242', '43234', '423'),
-(17, '4324', '234', '423'),
-(18, '43242', '4242', '4242'),
-(22, 'aaa', 'bbb', 'ccc'),
-(23, 'n111', 'n2222', 'n3333'),
-(24, 'MUP2_Artur2', 'Kolbego', '111-222-333'),
-(25, 'r23', '423', '42'),
-(26, 'rewrw', 'rewrw', 'rw'),
-(28, 'AAAA', 'BBBBB', 'CCCCC'),
-(29, '324', '42342', '423');
+(30, 'BudPlus', 'ul. Las 1', '111-222-333'),
+(31, 'Euro Transport', 'ul. Autostradowa 30', '222-222-222'),
+(32, 'Pinokio - sklep papierniczy', 'ul. Szkolna 3A', '321-321-321'),
+(33, 'Auto Komis \"ZŁOM i SZROT\"', 'ul. Awaryjna 12', '800-111-222'),
+(34, 'Salon fryzjerski \"Na Zero\"', 'ul. Szybka 2/4', '111-999-000'),
+(35, 'Sklep meblowy \"Stół i krzesło\"', 'ul. Domowa 299', '423-533-645');
 
 -- --------------------------------------------------------
 
@@ -87,8 +80,13 @@ CREATE TABLE `towary` (
 --
 
 INSERT INTO `towary` (`id`, `nazwa`, `cena`, `ilosc`) VALUES
-(2, 'towar1', 10, 100),
-(3, 't2', 11, 22);
+(4, 'TV', 1890, 100),
+(5, 'Pralka', 1200, 110),
+(6, 'Lodówka', 1900, 22),
+(7, 'Konsola', 2500, 10),
+(8, 'Głośniki', 120, 10),
+(9, 'Klawiatura', 220, 100),
+(10, 'Fotel ', 980, 21);
 
 -- --------------------------------------------------------
 
@@ -149,7 +147,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `klienci`
 --
 ALTER TABLE `klienci`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `operacje`
@@ -161,7 +159,7 @@ ALTER TABLE `operacje`
 -- AUTO_INCREMENT for table `towary`
 --
 ALTER TABLE `towary`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `users`

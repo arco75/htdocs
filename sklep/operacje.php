@@ -47,3 +47,20 @@
 <br>
 <button type="submit"> Zapłacono </button> 
 </form>
+
+<h2>Oto zakupy:</h2>
+<?PHP
+include 'dbconfig.php';
+$baza = mysqli_connect($server,$user,$pass,$base) or ('cos nie tak z polaczenie z BD');
+
+$zapytanie="SELECT K.nazwa AS K_nazwa, T.nazwa AS T_nazwa, O.data FROM operacje AS O,klienci AS K,towary AS T WHERE O.idk = K.id AND O.idt = T.id;";
+$result = $baza->query($zapytanie) or die ('bledne zapytanie');
+
+$n=0;
+while($wiersz = $result->fetch_assoc())
+{
+    $n=$n+1;
+    echo "<br>[".$n."] ".$wiersz['K_nazwa']." -> ".$wiersz['T_nazwa']." dnia:".$wiersz['data'];
+};
+$baza->close();
+?>

@@ -1,0 +1,11 @@
+Oddajemy:
+
+karta projktu (docx/pdf)
+instrukcja (docx/pdf)
+wszystkie pliki projektu(css/html/php/js)
+baza danych (cała w formacie SQL)
+
+całość umieszczamy w folderze KowalskiJan i pakujemy do ZIP (NIE RAR i NIE 7Zip)
+
+
+spakowany plik KowalskiJan.zip -> upload.pelo.com.pl

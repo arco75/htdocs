@@ -1,7 +1,7 @@
 <h1> Operacje</h1>
 
 <form method="POST" action="zakup.php">
-<input type="date" name="f_data">
+<input type="date" name="f_data" id="f_data">
 <br>Klient:
 <select name="f_klient">
 
@@ -64,3 +64,13 @@ while($wiersz = $result->fetch_assoc())
 };
 $baza->close();
 ?>
+
+<script>
+    let d = new Date();
+    let day = d.getDate(); 
+    let month = d.getMonth() + 1;  
+    let year = d.getFullYear(); 
+    
+    wynik=day+"-"+month+"-"+year;
+    document.getElementById('f_data').value=wynik;
+</script>

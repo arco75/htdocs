@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Maj 14, 2024 at 10:24 AM
+-- Generation Time: Maj 16, 2024 at 09:15 AM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -61,6 +61,16 @@ CREATE TABLE `operacje` (
   `data` date NOT NULL,
   `dokument` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Dumping data for table `operacje`
+--
+
+INSERT INTO `operacje` (`id`, `idk`, `idt`, `data`, `dokument`) VALUES
+(1, 32, 9, '0000-00-00', ''),
+(2, 33, 10, '0000-00-00', ''),
+(3, 32, 6, '0000-00-00', ''),
+(4, 34, 5, '2024-05-16', '');
 
 -- --------------------------------------------------------
 
@@ -153,7 +163,7 @@ ALTER TABLE `klienci`
 -- AUTO_INCREMENT for table `operacje`
 --
 ALTER TABLE `operacje`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `towary`
